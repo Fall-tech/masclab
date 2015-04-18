@@ -1,0 +1,318 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1344\cocoasubrtf720
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}
+{\list\listtemplateid7\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid601\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid7}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}{\listoverride\listid7\listoverridecount0\ls7}}
+\margl1440\margr1440\vieww28300\viewh15380\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs36 \cf0 Instructions for use of masclab
+\fs28 \
+\
+\ul Introduction\ulnone \
+\
+masclab
+\b0  is a selection of matlab tools for analyzing data collected by the Fallgatter Technologies Multi-Angle Snowflake Camera or MASC. It takes the scientist from raw image and velocity data to statistics for relating hydrometeor properties. 
+\b masclab 
+\i\b0 is not a commercial product and comes with no explicit offer of support. 
+\i0\b masclab 
+\b0 is nothing more than a collection of rather poorly designed programming tools that were developed by Tim Garrett at the University of Utah for his own scientific research. It may all be rather bad. Nonetheless, 
+\b masclab 
+\b0  is designed with other users in mind, and it is hoped that others might find it useful and improve it. IT IS CRITICAL TO CONTACT TIM GARRETT BEFORE USING THIS SUITE. 
+\b  
+\b0 IT IS \ul NOT\ulnone  A PROFESSIONALLY DESIGNED PRODUCT. Where there are months of data, it will be advisable to find a computer with as much memory as possible and multiple cores. Analysis at the University of Utah is run on, at a minimum, a 32 GB machine with 8 cores in parallel mode.\
+\
+
+\b \ul Overview\ulnone \
+\
+masclab 
+\b0 has four primary components organized by folder. Main programs that are not either functions (subroutines) or called by a main program are italicized: Programs that must be read, roughly understood, and/or modified to some degree are underlined. It might be a good idea to read all the codes.\
+\
+
+\b dataio/\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls1\ilvl0\cf0 {\listtext	\'95	}uploaddirs.m 
+\b0 Determines directories where MASC data is stored\
+\ls1\ilvl0
+\b {\listtext	\'95	}upload.m 
+\b0  Determines velocity and image files \
+\ls1\ilvl0
+\b {\listtext	\'95	}outdirs.m 
+\b0 Creates filenames and directories for processed images and statistics\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+
+\b userspecs/\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls2\ilvl0
+\b0 \cf0 {\listtext	\'95	}
+\b \ul mascpaths.m\ulnone  
+\b0 Specify path to masclab\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls2\ilvl0
+\b \cf0 {\listtext	\'95	}\ul label_params.m\ulnone  
+\b0 Specifies label format for input and output images for 
+\b MASC_process.m
+\b0 \
+\ls2\ilvl0
+\b {\listtext	\'95	}\ul cam_params.m 
+\b0 \ulnone Specifies camera lens, camera type, and image transfer rate for 
+\b MASC_process.m
+\b0 \
+\ls2\ilvl0
+\b {\listtext	\'95	}\ul process_params.m\ulnone  
+\b0 Image analysis thresholds. Primarily for image rejection for 
+\b MASC_process.m
+\b0 \
+{\listtext	\'95	}
+\b \ul \ulc0 diagnostics_params.m\ulnone  
+\b0 Specifies file output files from 
+\b loadstats.m
+\b0  and
+\b  loaddiags.m
+\b0 \
+{\listtext	\'95	}
+\b \ul blockstats_params.m\ulnone  
+\b0 Sets file input and output parameters for 
+\b blockstats.m
+\b0 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls2\ilvl0
+\b \cf0 {\listtext	\'95	}\ul strip_params.m\ulnone  
+\b0 Sets file input and output parameters for creating a stripchart with 
+\b flakestrip.m
+\b0 \
+\ls2\ilvl0
+\b {\listtext	\'95	}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 processing/\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls3\ilvl0
+\i \cf0 {\listtext	\'95	}\ul MASC_process.m
+\i0 \ulnone  
+\b0 Analyzes all raw MASC data to create diagnostics and statistical variables\
+\ls3\ilvl0
+\i\b {\listtext	\'95	}\ul loaddiags.m
+\i0  
+\b0 \ulnone Loads all analyzed MASC diagnostics data and creates higher level data products including paths to snowflake images. Saves data as a continuous time series\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls4\ilvl0
+\i\b \cf0 {\listtext	\'95	}\ul loadstats.m 
+\i0\b0 \ulnone Loads all analyzed MASC data and creates higher level data products. Saves data as a continuous time series\
+{\listtext	\'95	}
+\b brightening.m 
+\b0 Adds gamma correction to snowflake images to increase their apparent exposure as specified in 
+\b process_params.m
+\b0 \
+{\listtext	\'95	}
+\b masking.m 
+\b0 Blocks out extraneous background clutter in the edges of the image frame as specified in 
+\b process_params.m\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls4\ilvl0
+\b0 \cf0 {\listtext	\'95	}
+\b \ul sxthresholds.m\ulnone  
+\b0 This offers a chance for a second cut through the snowflakes for quality control. THIS IS A MUST READ AHEAD OF ANY SERIOUS ANALYSIS\
+\ls4\ilvl0
+\b {\listtext	\'95	}
+\i uploadstats.m
+\i0  
+\b0 Uploads the continuous output from 
+\b loaddiags.m
+\b0  and 
+\b loadstats.m 
+\b0 according to the input from 
+\b diagnostics_params.m
+\b0 . From this point, you are on your own for creating your own plots of the data. Scientific collaboration is always possible. 
+\b \
+\ls4\ilvl0
+\b0 {\listtext	\'95	}
+\i\b blockstats.m\ul  
+\i0\b0 \ulnone Create a file with consecutive time blocks of statistics for hydrometeor parameters, as specified in 
+\b blockstats_params.m\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 statistics/\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls5\ilvl0\cf0 {\listtext	\'95	}camstats.m 
+\b0 Calculates statistics for hydrometeor properties accounting for multiple view per image\
+{\listtext	\'95	}
+\b camlabelstats.m 
+\b0 Image paths for the statistics produced by 
+\b camstats.m
+\b0 \
+\ls5\ilvl0
+\b {\listtext	\'95	}insertnans.m 
+\b0 Creates a continuous time series with NaNs inserted where no MASC data was recorded\
+{\listtext	\'95	}
+\b labelinsertnans.m 
+\b0 Image paths for the continuous time series produced by 
+\b instertnans.m
+\b0 \
+\ls5\ilvl0
+\b {\listtext	\'95	}nanblockstats.m 
+\b0 Creates a running statistical analysis of a time series, organized in sequential time blocks. A range of statistical analyses are available.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 \
+plotting/\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls6\ilvl0\cf0 {\listtext	\'95	}
+\i flakestrip.m
+\i0  
+\b0 Creates a strip chart booklet in postscript format for the output from 
+\b blockstats.m 
+\b0 according to the variables, plotting conditions, and input and output files specified in 
+\b strip_params.m \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls6\ilvl0
+\b0 \cf0 {\listtext	\'95	}
+\b stripchart.m 
+\b0 Subroutine for creating a stripchart.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \ul Operation\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural
+\ls7\ilvl0
+\b0 \cf0 \ulnone {\listtext	1.	}Place 
+\b masclab 
+\b0 in your matlab 
+\i path 
+\i0 using 
+\i pathtool 
+\i0 or by editing 
+\b mascpaths.m
+\i\b0  \
+\ls7\ilvl0
+\i0 {\listtext	2.	}Adjust the matlab
+\i  
+\i0 files in 
+\b userspecs/ 
+\b0  as you see fit and as pertain to your MASC and field program. Adjust 
+\b process_params.m 
+\b0 only if you feel brave, perhaps if you think the image processing is rejecting too much or too little, and then perhaps after consultation with TJG\
+{\listtext	3.	}If possible, find a fast computer with nothing else to do, preferably with as many processors as possible so that matlab can take advantage of the parallel processing toolbox.\
+{\listtext	4.	}Run 
+\b MASC_process.m. 
+\b0 Specify 
+\i starthr 
+\i0  and 
+\i endhr 
+\i0  first. In general 
+\i firsttime 
+\i0 should be equal to 1, unless you are feeling brave and want to test analysis algorithms on individual flakes. \
+{\listtext	5.	}Wait. Count on a second per flake per processor. Sorry. Image analysis apparently takes time. It might be days.\
+{\listtext	6.	}Run 
+\b loaddiags.m 
+\b0 Specify 
+\i starthr 
+\i0  and 
+\i endhr
+\i0  Matlab is terrible at handling strings. Count on lots of time particularly when it comes to saving data.
+\i \
+\ls7\ilvl0
+\i0 {\listtext	7.	}Run 
+\b loadstats.m 
+\b0 Specify 
+\i starthr 
+\i0  and 
+\i endhr\
+\ls7\ilvl0
+\i0 {\listtext	8.	}Run 
+\b uploadstats.m 
+\b0 to upload analyzed variables into memory in continuous time form in order begin detailed scientific analyses.\
+{\listtext	9.	}Adjust and run 
+\b sxthresholds.m 
+\b0 to optimize selection of good images. Scientific analyses may begin here.\
+\ls7\ilvl0{\listtext	10.	}(Optional) Run 
+\b blockstats.m 
+\b0 to create time blocked statistics using 
+\b nanblockstats.m
+\b0 , which can do quite a lot.\
+{\listtext	11.	}(Optional) Run 
+\b flakestrip.m 
+\b0 to create a booklet of how hydrometeor parameters have evolved through time over the course of the project.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \ul Dependencies\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \ulnone MASC_process.m\
+	uploaddirs.m\
+	upload.m\
+	outdirs.m\
+	label_params.m\
+	process_params.m\
+         cam_params.m\
+         masking.m\
+         brightening.m\
+\
+loaddiags.m\
+	uploaddirs.m\
+	label_params.m\
+	cam_params.m\
+	camstats.m\
+	insertnans.m\
+\
+loadstats.m\
+	uploaddirs.m\
+	label_params.m\
+	cam_params.m\
+	camstats.m\
+	insertnans.m\
+\
+uploadstats.m\
+	diagnostics_params.m\
+	cam_params.m\
+	sxthresholds.m\
+\
+blockstats.m\
+	blockstats_params.m\
+	diagnostics_params.m\
+	nanblockstats.m\
+\
+flakestrip.m\
+	blockstats_params.m\
+	diagnostics_params.m\
+	strip_params.m\
+	stripchart.m\
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \ul Externally supplied functions and libraries\
+\
+	jlab 
+\b0 \ulnone available at http://www.jmlilly.net/jmlsoft.html This is worth downloading in any case. Lots of goodies.\
+	
+\b ismemberf.m 
+\b0 floating point errors are a pain. This helps. http://www.mathworks.com/matlabcentral/fileexchange/23294-ismemberf\
+         \
+
+\b \ul Required matlab toolboxes\
+\
+	\ulnone Imaging processing\
+	Parallel computing.
+\b0  Not necessary, but will accelerate processing where there is access to a machine with multiple cores \
+	
+\b \ul \
+}
